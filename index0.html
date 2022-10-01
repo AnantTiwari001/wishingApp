@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali</title>
+    <style>
+        span {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <span>Happy dipawali from </span>
+    <span id="from Your Frienda"></span>
+
+    <button style="padding: 8px; position: absolute; bottom: 10px; right: 5px;background-color: aqua;"
+        onclick="askName()">Wish
+        friend</button>
+</body>
+<script>
+    function askName() {
+        let subjectName = prompt('Enter your name here!', 'friend')
+        let urlToBeShared= `${window.location.origin + window.location.pathname + '?name=' + subjectName} `
+        navigator.clipboard.writeText(urlToBeShared);
+        alert('here is your link! Share with your friends! \n'+ urlToBeShared);
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    document.getElementById('from').innerText = name;
+</script>
+
+</html>

@@ -1,0 +1,1 @@
+So this is the project for a app that will wish people on the behalf of the url's parameter!
