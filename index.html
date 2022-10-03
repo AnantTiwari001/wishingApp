@@ -54,6 +54,20 @@
       position: absolute;
       bottom: 8px;
       right: 30px;
+      animation: rotate 700ms infinite;
+      animation-delay: 200ms;
+    }
+
+    @keyframes rotate {
+      0%{
+        transform: rotate(3deg) translateX(7px);
+      }
+      50%{
+        transform: rotate(-3deg) translateX(0px);
+      }
+      100%{
+        transform: rotate(3deg) translateX(7px);
+      }
     }
 
     #wish-main>h1 {
@@ -61,6 +75,8 @@
       top: 8px;
       left: 8px;
       font-size: 30px;
+      /* animation: rotate 700ms infinite; */
+      font-family: cursive;
     }
 
     .wish {
@@ -99,18 +115,18 @@
   </div>
   <div class="wrapper ">
     <!-- Navbar -->
-    <nav class="navbar navbar-dark sticky-top top-0" style="background-color: rgba(0, 0, 0, 0.741);" >
+    <nav class="navbar navbar-dark sticky-top top-0" style="background-color: rgba(0, 0, 0, 0.741);">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="namaste-logo.jpg" alt="Website logo" width="45" height="36">
         </a>
         <form>
-          <button class="btn btn-primary me-2" type="button" onclick="askName()" >Wish Others</button>
+          <button class="btn btn-primary me-2" type="button" onclick="askName()">Wish Others</button>
         </form>
       </div>
     </nav>
     <div id="wish-main">
-      <h1 >Wishing You Happy Dashain</h1>
+      <h1>Wishing You Happy Dashain</h1>
       <p id="from" class="font-monospace lead">From Anant</p>
     </div>
 
@@ -244,9 +260,17 @@
     const urlParams = new URLSearchParams(window.location.search);
     const name = urlParams.get('name');
 
-    document.getElementById('from').innerText = 'From ' + (name ? name:'Friend');
+    document.getElementById('from').innerText = 'From ' + (name ? name : 'Friend');
 
 
+    var audio = new Audio("JaiGirinandani.mp3");
+    audio.setAttribute('muted','muted')
+    console.log(audio.pause());
+    audio.play();
+    audio.addEventListener('pause', ()=>{
+      console.log('audio paused should restart');
+      audio.play();
+    })
 
     function initial() {
       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
