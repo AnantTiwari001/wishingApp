@@ -266,9 +266,19 @@
     var audio = new Audio("JaiGirinandani.mp3");
     audio.setAttribute('muted','muted')
     console.log(audio.pause());
-    audio.play();
+    setTimeout(() => {
+      // audio.play();
+      document.querySelector('nav').click()
+    }, 1000);
     audio.addEventListener('pause', ()=>{
       console.log('audio paused should restart');
+      audio.play();
+    })
+    document.addEventListener('touchstart',()=>{
+      console.log('fuck google who think I cannot play audio without click');
+      audio.play();
+    })
+    document.addEventListener('click',()=>{
       audio.play();
     })
 
