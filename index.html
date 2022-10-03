@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="namaste-logo.jpg" type="image/jpg">
   <meta property="og:url" content="https://mysite/myarticle" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Happy Dashain" />
@@ -125,7 +126,7 @@
         </form>
       </div>
     </nav>
-    <div id="wish-main">
+    <div id="wish-main" class="mt-5">
       <h1>Wishing You Happy Dashain</h1>
       <p id="from" class="font-monospace lead">From Anant</p>
     </div>
@@ -264,8 +265,8 @@
 
 
     var audio = new Audio("JaiGirinandani.mp3");
-    audio.setAttribute('muted','muted')
-    console.log(audio.pause());
+    // audio.setAttribute('muted','muted')
+    // console.log(audio.pause());
     setTimeout(() => {
       // audio.play();
       document.querySelector('nav').click()
@@ -275,11 +276,11 @@
       audio.play();
     })
     document.addEventListener('touchstart',()=>{
-      console.log('fuck google who think I cannot play audio without click');
       audio.play();
     })
     document.addEventListener('click',()=>{
       audio.play();
+      console.log('drage is here okay bye')
     })
 
     function initial() {
