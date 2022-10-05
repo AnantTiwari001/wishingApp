@@ -1,0 +1,84 @@
+svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  svg:hover,
+  svg:active {
+    background-color: rgba(128, 128, 128, 0.706);
+  }
+
+  body {
+    padding: 0 0;
+    color: black;
+    background-color: rgb(47, 39, 39);
+  }
+
+  #wish-main {
+    /* display: flex; */
+    height: 525px;
+    max-width: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: -1;
+    transform: translateZ(-10px) scale(2);
+    color: black;
+  }
+
+  #wish-main>p {
+    position: absolute;
+    bottom: 8px;
+    right: 30px;
+    animation: rotate 700ms infinite;
+    animation-delay: 200ms;
+  }
+
+  @keyframes rotate {
+    0%{
+      transform: rotate(3deg) translateX(7px);
+    }
+    50%{
+      transform: rotate(-3deg) translateX(0px);
+    }
+    100%{
+      transform: rotate(3deg) translateX(7px);
+    }
+  }
+
+  #wish-main>h1 {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 30px;
+    /* animation: rotate 700ms infinite; */
+    font-family: cursive;
+  }
+
+  .wish {
+    text-align: end;
+    margin-top: 10px;
+    padding: 20px 10px;
+  }
+
+  .callToAction {
+    padding: 20px 10px;
+  }
+
+  .mataImages {
+    padding: 20px 10px;
+  }
+
+  .wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+  }
+
+  .wish-side {
+    background-color: black;
+    color: white;
+  }
