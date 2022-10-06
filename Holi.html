@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="namaste-logo.jpg" type="image/jpg">
-  <meta property="og:url" content="https://mysite/myarticle" />
+  <meta property="og:url" content="https://kali0charan.github.io/wishingApp/Holi.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Happy Dashain" />
-  <meta property="og:description" content="may This special ocassion bring peace and prosperity in your life" />
+  <meta property="og:title" content="Happy Holi" />
+  <meta property="og:description" content="may This colors of festival, paint your life with colors of happiness" />
   <meta property="og:image"
-    content="https://kali0charan.github.io/wishingApp/Images/Dashain/Happy-Dashain-2079-min.jpg" />
+    content="https://kali0charan.github.io/wishingApp/Images/Holi/try0.jpg" />
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -39,7 +39,7 @@
         </form>
       </div>
     </nav>
-    <div id="wish-main" class="mt-5" style="height: 580px; color: rgb(190, 190, 204); background-image: url(Images/Holi/try0.jpg); background-size: cover;">
+    <div id="wish-main" class="mt-4" style="height: 580px; color: rgb(190, 190, 204); background-image: url(Images/Holi/try0.jpg); background-size: cover;">
       <h1>Wishing You Happy Holi</h1>
       <p id="from" class="font-monospace lead">From Anant</p>
     </div>
@@ -163,25 +163,6 @@
 
     document.getElementById('from').innerText = 'From ' + (name ? name : 'Friend');
 
-
-    // var audio = new Audio("JaiGirinandani.mp3");
-    // audio.setAttribute('muted','muted')
-    // console.log(audio.pause());
-    setTimeout(() => {
-      // audio.play();
-      document.querySelector('nav').click()
-    }, 1000);
-    audio.addEventListener('pause', () => {
-      console.log('audio paused should restart');
-      audio.play();
-    })
-    document.addEventListener('touchstart', () => {
-      audio.play();
-    })
-    document.addEventListener('click', () => {
-      audio.play();
-      console.log('drage is here okay bye')
-    })
 
     function initial() {
       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
