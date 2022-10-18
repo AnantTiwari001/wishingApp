@@ -30,7 +30,7 @@ svg {
 
   #wish-main>p {
     position: absolute;
-    bottom: 8px;
+    bottom: 45px;
     right: 30px;
     animation: rotate 700ms infinite;
     animation-delay: 200ms;
