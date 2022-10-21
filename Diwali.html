@@ -166,9 +166,9 @@
       // navigator.clipboard.writeText(urlToBeShared);
       document.getElementById('link').innerText = urlToBeShared;
       document.getElementById('sharePop').click();
-      document.getElementById('fb').href+='Diwali.html'
-      document.getElementById('whatsapp').href+='Diwali.html'
-      document.getElementById('msg').href+='Diwali.html'
+      document.getElementById('fb').href+=`Diwali.html/?name=${subjectName}`
+      document.getElementById('whatsapp').href+=`Diwali.html?name=${subjectName}`
+      document.getElementById('msg').href+=`Diwali.html/?name=${subjectName}`
 
     }
     document.getElementById('copyTo').addEventListener('click', function () {
